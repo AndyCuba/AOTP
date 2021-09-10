@@ -3,8 +3,11 @@
     "name": "reactNativeApp",
     "slug": "reactNativeApp",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
+    "androidNavigationBar": {
+      "visible": "immersive"
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

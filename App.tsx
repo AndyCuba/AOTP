@@ -1,13 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text } from 'react-native';
+import { MainHeading, StyledBackground, StyledView } from './globalStyle';
 
 export default function App() {
+  //StatusBar is hidden in app.json
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <StyledView >
+      <StyledBackground 
+        source={require('./assets/welcome_screen_bg.gif')} 
+        resizeMode='cover'
+      >
+        <MainHeading>Привет</MainHeading>
+
+        </StyledBackground>
+      <StatusBar style="auto" hidden={true} />
+    </StyledView>
+
   );
 }
 
