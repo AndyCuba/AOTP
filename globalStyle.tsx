@@ -1,5 +1,10 @@
 import styled from 'styled-components/native';
-import { View, Text, ImageBackground } from 'react-native';
+import { View, ImageBackground } from 'react-native';
+
+
+type StyledTextType = {
+    fontFamily: string
+};
 
 const StyledView = styled(View)`
     flex: 1;
@@ -7,14 +12,16 @@ const StyledView = styled(View)`
 
 const StyledBackground = styled(ImageBackground)`
     flex: 1;
-    justify-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 `;
 
-const MainHeading = styled(Text)`
-    font-size: 30px;
+const MainHeading = styled.Text<StyledTextType>`
+    padding-top: 60px;
+    font-size: 40px;
+    font-family: ${props => props.fontFamily};
     color: white;
+    letter-spacing: 2px;
 `;
 
 export {
