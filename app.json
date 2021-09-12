@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "orientation": "landscape",
     "icon": "./assets/icon.png",
+    "backgroundColor": "#424242",
     "androidNavigationBar": {
       "visible": "immersive"
     },
@@ -29,7 +30,12 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "build": {
+        "babel": {
+          "include": ["react-router-native"]
+        }
+      }
     }
   }
 }

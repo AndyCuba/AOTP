@@ -21,8 +21,14 @@ const MainHeading = styled.Text<MainHeadingType>`
     color: white;
     letter-spacing: 2px;
 `;
+
+const StyledLink = styled.View`
+    background: white;
+`;
+
 export {
     StyledIntroView,
     StyledBackground,
-    MainHeading
+    MainHeading,
+    StyledLink
 };

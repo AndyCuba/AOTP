@@ -1,10 +1,16 @@
 import React from 'react';
-import IntroPage from './src/pages/IntroPage/IntroPage';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import BackgroundMusic from './src/components/BackgroundMusic/BackgroundMusic';
+import Navigation from './src/components/Navigation/Navigation';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return(
     <>
-      <IntroPage />
+      <Navigation />
+      <BackgroundMusic />
     </>
   );
 };

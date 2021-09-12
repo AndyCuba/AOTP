@@ -1,7 +1,12 @@
+import { Component, ReactChild, ReactChildren } from 'hoist-non-react-statics/node_modules/@types/react';
 import React, { useRef, useEffect } from 'react';
 import { Animated } from 'react-native';
 
-export default function FadeInView(props: any) {
+interface ChildrenProps {
+  children: ReactChild | ReactChildren;
+}
+
+export default function FadeInView({children}: ChildrenProps) {
   const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
 
   useEffect(() => {
@@ -20,7 +25,7 @@ export default function FadeInView(props: any) {
         opacity: fadeAnim,         // Bind opacity to animated value
       }}
     >
-      {props.children}
+      {children}
     </Animated.View>
   );
 };
