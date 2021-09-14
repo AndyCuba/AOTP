@@ -1,4 +1,4 @@
-import { Component, ReactChild, ReactChildren } from 'hoist-non-react-statics/node_modules/@types/react';
+import { ReactChild, ReactChildren } from 'hoist-non-react-statics/node_modules/@types/react';
 import React, { useRef, useEffect } from 'react';
 import { Animated } from 'react-native';
 
