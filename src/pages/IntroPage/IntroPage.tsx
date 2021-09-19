@@ -2,12 +2,23 @@ import React from 'react';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
-import { Button, Text } from 'react-native';
+import { Button } from 'react-native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
+import { RootStackParamList } from '../../components/Navigation/Navigation';
 import { MainHeading, StyledBackground, StyledIntroView, StyledLink } from './style';
 import FadeInView from '../../components/FadeInView/FadeInView';
 
-export default function IntroPage({navigation}: any) {
+type ProfileScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  'Intro'
+>;
+
+type Props = {
+    navigation: ProfileScreenNavigationProp,
+};
+
+export default function IntroPage({navigation}: Props) {
     let [fontsLoaded] = useFonts({
         'Karantina-Regular': require('../../../assets/fonts/Karantina-Regular.ttf'),
     });

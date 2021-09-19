@@ -4,8 +4,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import IntroPage from '../../pages/IntroPage/IntroPage';
 import SettingsPage from '../../pages/SettingsPage/SettingsPage';
 
+export type RootStackParamList = {
+    Intro: undefined,
+    Settings: undefined,
+};
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function Navigation() {
 
