@@ -1,11 +1,13 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
+import Constants from 'expo-constants';
+import { Button, Text } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { RootStackParamList } from '../../components/Navigation/Navigation';
 import FadeInView from '../../components/FadeInView/FadeInView';
-import { StyledBackground, StyledIntroView } from '../IntroPage/style';
-import { Button, Text } from 'react-native';
+import { StyledSettingsView } from './style';
+import AppText from '../../components/AppText/AppText';
 
 type ProfileScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -19,17 +21,12 @@ type Props = {
 export default function SettingsPage({navigation}: Props) {
 
     return(
-        <StyledIntroView>
-            <StyledBackground
-            source={require('../../../assets/welcome_screen_bg.gif')} 
-            resizeMode='cover'
-            >   
-                <FadeInView>
-                    <Text>Settings</Text>
-                </FadeInView>
-                <Button title="В меню" onPress={() => navigation.navigate('Intro')} />
-            </StyledBackground>
+        <StyledSettingsView paddingTop={Constants.statusBarHeight}>
+            <FadeInView>
+                <AppText>Settings</AppText>
+            </FadeInView>
+            <Button title="В меню" onPress={() => navigation.navigate('Intro')} />
             <StatusBar style="auto" hidden={true} />
-        </StyledIntroView> 
+        </StyledSettingsView> 
     );
 };

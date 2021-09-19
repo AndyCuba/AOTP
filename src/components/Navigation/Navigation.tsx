@@ -15,7 +15,7 @@ export default function Navigation() {
 
     return(
         <NavigationContainer >
-            <Stack.Navigator screenOptions={{ headerShown: false, animation: "slide_from_right" }} >
+            <Stack.Navigator screenOptions={{ headerShown: false, animation: "slide_from_right", presentation:"transparentModal" }} >
                 <Stack.Screen name="Intro" component={IntroPage}  />
                 <Stack.Screen name="Settings" component={SettingsPage} />
             </Stack.Navigator>

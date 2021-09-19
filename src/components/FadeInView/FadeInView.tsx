@@ -13,7 +13,7 @@ export default function FadeInView({children}: ChildrenProps) {
     Animated.timing(
         fadeAnim, {
             toValue: 1,
-            duration: 4000,
+            duration: 3000,
             useNativeDriver: true, 
         }
     ).start();

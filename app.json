@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "reactNativeApp",
-    "slug": "reactNativeApp",
+    "name": "Ashes of the past",
+    "slug": "AshesOfThePast",
     "version": "1.0.0",
     "orientation": "landscape",
     "icon": "./assets/icon.png",
