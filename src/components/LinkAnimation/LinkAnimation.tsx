@@ -12,7 +12,7 @@ export default function LinkAnimation({children}: ChildrenProps) {
   const scaleDown = Animated.timing(
     bounce, {
         toValue: 0.8,
-        duration: 200,
+        duration: 125,
         useNativeDriver: true,
         easing: Easing.back(2),
     }
@@ -21,7 +21,7 @@ export default function LinkAnimation({children}: ChildrenProps) {
   const scaleUp = Animated.timing(
     bounce, {
         toValue: 1,
-        duration: 200,
+        duration: 125,
         useNativeDriver: true,
         easing: Easing.back(2),
     }

@@ -9,6 +9,11 @@ const StyledSettingsView = styled.View<ViewProps>`
     padding-top: ${props => props.paddingTop}px;
 `;
 
+const StyledSettingsWrapper = styled.View`
+
+`;
+
 export {
     StyledSettingsView,
+    StyledSettingsWrapper,
 };
