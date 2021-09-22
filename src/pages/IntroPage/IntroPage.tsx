@@ -24,7 +24,7 @@ export default function IntroPage() {
                     <MainHeading>ASHES OF THE PAST</MainHeading>
                 </FadeInView>
                 <LinkAnimation>
-                    <StyledLink to="/Settings">
+                    <StyledLink to="/Story">
                         <StyledLinkText>Игра</StyledLinkText>
                     </StyledLink>
                 </LinkAnimation>

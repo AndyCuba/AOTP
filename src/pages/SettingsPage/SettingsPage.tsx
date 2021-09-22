@@ -1,28 +1,20 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import Constants from 'expo-constants';
-import { Button, Switch, View } from 'react-native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { RootStackParamList } from '../../components/Navigation/Navigation';
-import FadeInView from '../../components/FadeInView/FadeInView';
-import { StyledBackground, StyledHeading, StyledMusicSwitch, StyledSettingsView, StyledSettingsWrapper, StyledSwitch } from './style';
-import AppText from '../../components/AppText/AppText';
+import { 
+    StyledBackground, 
+    StyledHeading, 
+    StyledMusicSwitch, 
+    StyledSettingsView, 
+    StyledSettingsWrapper, 
+    StyledSwitch } from './style';
 import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { musicSelector } from '../../redux/reducers/musicReducer/musicSelectors';
 import { toggleMusic } from '../../redux/reducers/musicReducer/musicReducer';
 import { StyledLink, StyledLinkText } from '../IntroPage/style';
 
-type ProfileScreenNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'Settings'
->;
-
-type Props = {
-    navigation: ProfileScreenNavigationProp,
-};
-
-export default function SettingsPage({navigation}: Props) {
+export default function SettingsPage() {
     const dispatch = useAppDispatch();
     const isMusicPlaying = useAppSelector(musicSelector);
 
@@ -33,7 +25,6 @@ export default function SettingsPage({navigation}: Props) {
     return(
         <StyledSettingsView paddingTop={Constants.statusBarHeight}>
             <StatusBar style="auto" hidden={true} />
-            {/* <FadeInView> */}
                 <StyledSettingsWrapper>
                     <StyledBackground 
                         source={require('../../../assets/settings_bg.jpeg')} 
@@ -56,7 +47,6 @@ export default function SettingsPage({navigation}: Props) {
                         </StyledLink>
                     </StyledBackground>
                 </StyledSettingsWrapper>
-            {/* </FadeInView> */}
         </StyledSettingsView> 
     );
 };
